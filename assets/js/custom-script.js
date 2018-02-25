@@ -4,7 +4,7 @@ var progressCallback = function () {
         $(this).text($(this).text() + "  -  " + newWidth + "%");
         $(this).animate({
             width: newWidth + '%'
-        }, 1000);
+        },0);
     });
 };
 
@@ -13,17 +13,17 @@ $(document).ready(function () {
     progressCallback();
 
     /* Add CSS animation class */
-    $('h1').addClass('wow animated fadeInDown');
-    $('h2,#portfoliolist').addClass('wow animated fadeInUp');
-    $('.img-profile,.btn').addClass('wow animated fadeInLeft');
-    $('.mini-desc').addClass('wow animated fadeIn');
-    $('.timeline-badge').addClass('wow animated fadeInLeft');
-    $('.timeline-panel').addClass('wow animated rotateInUpLeft');
-    $('.languages i').addClass('wow animated fadeInRight');
-    $('.hobbies .badge').addClass('wow animated fadeInRight');
-    $('.published div,.awards li,.contact li').addClass('wow animated fadeInRight');
-    $('.follow li').addClass('wow animated flipInY');
-    $('.quick-contact i,.service-icon i').addClass('wow bounceIn');
+    // $('h1').addClass('wow animated fadeInDown');
+    // $('h2,#portfoliolist').addClass('wow animated fadeInUp');
+    // $('.img-profile,.btn').addClass('wow animated fadeInLeft');
+    // $('.mini-desc').addClass('wow animated fadeIn');
+    // $('.timeline-badge').addClass('wow animated fadeInLeft');
+    // $('.timeline-panel').addClass('wow animated rotateInUpLeft');
+    // $('.languages i').addClass('wow animated fadeInRight');
+    // $('.hobbies .badge').addClass('wow animated fadeInRight');
+    // $('.published div,.awards li,.contact li').addClass('wow animated fadeInRight');
+    // $('.follow li').addClass('wow animated flipInY');
+    // $('.quick-contact i,.service-icon i').addClass('wow bounceIn');
 
     /* WOW Animation When You Scroll */
     wow = new WOW({

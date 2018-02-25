@@ -496,7 +496,7 @@
                 </footer>
             </div>
             <!-- End Footer -->
-            <a type="button" id="down_button"></a>
+            <image src="" id="down_button"></image>
         </div>
 
         <!-- End container -->
@@ -518,30 +518,38 @@
     <script src="assets/js/custom-script.js"></script>
     <script src="assets/js/html2canvas.min.js"></script>
     <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-46102911-5', 'auto');
-        ga('send', 'pageview');
+        // (function (i, s, o, g, r, a, m) {
+        //     i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        //         (i[r].q = i[r].q || []).push(arguments)
+        //     }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        //     m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        // })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        //
+        // ga('create', 'UA-46102911-5', 'auto');
+        // ga('send', 'pageview');
 
         $("#creat").click(function(){
-            html2canvas($("body"),{
-                onrendered:function(canvas){
-                    dataURL =canvas.toDataURL("image/png");
-                    // $("body").append(canvas);
-                     console.log(dataURL);
+            html2canvas(document.getElementById("wrapper")).then(function(canvas) {
+                dataURL =canvas.toDataURL("image/png");
+                $('#down_button').attr( 'src' ,  dataURL ) ;
+                //console.log(dataURL);
+                //$('#down_button').attr( 'download' , 'myjobdeer.png' ) ;
+                //document.body.appendChild(canvas);
+            });
 
-                    //下载图片
-                    $('#down_button').attr( 'href' ,  dataURL ) ;
-                    $('#down_button').attr( 'download' , 'myjobdeer.png' ) ;
-                },
-                width:320,
-                height:400
-            })
+            // html2canvas(document.querySelector("#wrapper"),{
+            //     onrendered:function(canvas){
+            //         dataURL =canvas.toDataURL("image/png");
+            //         $("body").append(canvas);
+            //          console.log(dataURL);
+            //
+            //         //下载图片
+            //         $('#down_button').attr( 'href' ,  dataURL ) ;
+            //         $('#down_button').attr( 'download' , 'myjobdeer.png' ) ;
+            //     },
+            //     width:700,
+            //     height:1400
+            // })
         })
 </script>
 </body>
