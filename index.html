@@ -31,7 +31,7 @@
             <div class="row">
                 <div class="col-sm-3 col-md-2 text-center">
                     <!-- Avatar Image -->
-                    <img src="assets/images/avatar.jpg" alt="avatar" class="img-responsive img-profile thumbnail">
+                    <img src="assets/images/photo.jpeg" alt="avatar" class="img-responsive img-profile thumbnail">
                     <!-- Download and Print button -->
                     <!--<ul class="list-unstyled">-->
                         <!--<li><a href="javascript:void(0)" class="btn btn-download btn-inverse btn-sm hidden-print" role="button"><i class="fa fa-download"></i>&nbsp;Download CV</a></li>-->
@@ -48,6 +48,14 @@
                             <!--<p><i class="fa fa-quote-left"></i>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>-->
                             <!--<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>-->
                         <!--</blockquote>-->
+                        <ul>
+                            <li>做人踏实稳重，做事仔细耐心</li>
+                            <li>强烈的团队合作意识，能很好地融入团队</li>
+                            <li>拥有较快的学习能力，能尽快掌握新技术融入项目开发当中</li>
+                            <li>在压力下能保持积极的工作状态</li>
+                            <li>有较强的时间观念</li>
+                            <li>一直保持着良好的学习习惯，愿意接受任何挑战!</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-3">
@@ -330,7 +338,13 @@
                                     <div class="list-group" >
                                         <a href="#" class="list-group-item">
                                             <h4 class="list-group-item-heading">团队组成</h4>
-                                            <p class="list-group-item-text" style="min-height: 120px;font-size: 14px">JAVA（8）+前端（3）+安卓（3）+IOS（1）+测试（3）+UI（1）+硬件（2）</p>
+                                            <div class="row list-group-item-text" style="min-height: 120px;font-size: 14px">
+                                                <div class="col-md-12">JAVA 8人</div>
+                                                <div class="col-md-12">前端 5人</div>
+                                                <div class="col-md-12">测试 3人</div>
+                                                <div class="col-md-12">UI 2人</div>
+                                                <div class="col-md-12">产品 4人</div>
+                                            </div>
                                         </a>
                                     </div>
                                 </div>
@@ -338,7 +352,15 @@
                                     <div class="list-group">
                                         <a href="#" class="list-group-item">
                                             <h4 class="list-group-item-heading">团队角色</h4>
-                                            <p class="list-group-item-text" style="min-height: 120px;font-size: 14px">本人在项目中担技术总监角色，整体负责技术团队后端、前端、移动端、硬件的技术架构，参与建设了云平台的重构、前端架构的搭建，在项目迭代过过程中，引入持续家集成工具，敏捷开发模式，自动化测试等。</p>
+                                            <p class="list-group-item-text" style="min-height: 120px;font-size: 14px">本人在项目中担架构师角色，整体负责技术团队后端、前端、运维的技术架构，参与建设了云平台的重构、前端架构的搭建，后端spring cloud微服务搭建、在项目迭代过过程中，引入docker容器服务、持续化集成工具，敏捷开发模式，自动化测试等。</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item">
+                                            <h4 class="list-group-item-heading">服务器架构</h4>
+                                            <p class="list-group-item-text" style="min-height: 120px;font-size: 14px">借助docker容器化服务，为前端、后端各个模块构建镜像，结合持续化集成工具以及镜像仓库，达到版本可追溯、可回滚、可快速部署的目的。后续在优化过程中，引入docker swarm特性，使应用可快速伸缩，服务器资源合理优化利用的目的。</p>
                                         </a>
                                     </div>
                                 </div>
@@ -346,7 +368,7 @@
                                     <div class="list-group">
                                         <a href="#" class="list-group-item">
                                             <h4 class="list-group-item-heading">后端架构</h4>
-                                            <p class="list-group-item-text" style="min-height: 120px;font-size: 14px">以微服务架构+Rest Api构建后端服务，充分解耦各个系统，同时实现API的自动化生成 参考微信公众号的实现模式，已客户中心为基础，系统间以公众号的模式治理，实现公司内系统或第三方系统的快速接入</p>
+                                            <p class="list-group-item-text" style="min-height: 120px;font-size: 14px">以spring boot构建后端服务，在原有1.0基础上重构了整个系统，包含领域模型的建立、单元测试的覆盖、自动化接口文档等。在后续优化过程中，引入了接口网关、一二级缓存、服务路由、性能监控等spring cloud特性。</p>
                                         </a>
                                     </div>
                                 </div>
@@ -354,7 +376,7 @@
                                     <div class="list-group">
                                         <a href="#" class="list-group-item">
                                             <h4 class="list-group-item-heading">前端架构</h4>
-                                            <p class="list-group-item-text" style="min-height: 120px;font-size: 14px">以React、React Router、Redux、Webpack等新一代前端技术，构建Spa前端系统，同时实现前后端的真正分离，优化了团队的开发效率 App以H5作为主要的功能实现，同时使用类微信的Js Bridge的Api，达到原生与H5的无缝接入</p>
+                                            <p class="list-group-item-text" style="min-height: 120px;font-size: 14px">以React、React Router、Redux、Webpack等新一代前端技术，构建Spa前端系统，同时实现前后端的真正分离，优化了团队的开发效率。另外，引入react-native的手机技术、使用sketch作为美工、前端人员的交互工具，发布安卓及ios的手机app。</p>
                                         </a>
                                     </div>
                                 </div>
@@ -372,7 +394,15 @@
                                     <div class="list-group" >
                                         <a href="#" class="list-group-item">
                                             <h4 class="list-group-item-heading">团队组成</h4>
-                                            <p class="list-group-item-text" style="min-height: 120px;font-size: 14px">JAVA（8）+前端（3）+安卓（3）+IOS（1）+测试（3）+UI（1）+硬件（2）</p>
+                                                <div class="row list-group-item-text" style="min-height: 120px;font-size: 14px">
+                                                  <div class="col-md-6">JAVA 8人</div>
+                                                  <div class="col-md-6">前端 3人</div>
+                                                  <div class="col-md-6">安卓 3人</div>
+                                                  <div class="col-md-6">IOS 1人</div>
+                                                  <div class="col-md-6">测试 3人</div>
+                                                  <div class="col-md-6">UI 2人</div>
+                                                  <div class="col-md-6">产品 4人</div>
+                                                </div>
                                         </a>
                                     </div>
                                 </div>
@@ -417,35 +447,19 @@
                             </div>
                             <div class="service-description">本项目是响应集团对客户关系管理系统的改造，从库表模型、业务功能规范上遵循集团的指引，重新开发的一套客户关系管理系统。系统分为订单受理、客户管理、积分信用度管理、营销资源管理、综合查询、定时任务、外部系统接口等多个模块。</div>
                             <div class="row" >
-                                <div class="col-md-4">
-                                    <div class="list-group" >
-                                        <a href="#" class="list-group-item">
-                                            <h4 class="list-group-item-heading">团队组成</h4>
-                                            <p class="list-group-item-text" style="min-height: 120px;font-size: 14px">JAVA（8）+前端（3）+安卓（3）+IOS（1）+测试（3）+UI（1）+硬件（2）</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <div class="list-group">
                                         <a href="#" class="list-group-item">
                                             <h4 class="list-group-item-heading">团队角色</h4>
-                                            <p class="list-group-item-text" style="min-height: 120px;font-size: 14px">本人在项目中担技术总监角色，整体负责技术团队后端、前端、移动端、硬件的技术架构，参与建设了云平台的重构、前端架构的搭建，在项目迭代过过程中，引入持续家集成工具，敏捷开发模式，自动化测试等。</p>
+                                            <p class="list-group-item-text" style="min-height: 120px;font-size: 14px">本人担任客户管理、积分信用度管理、营销资源管理、综合查询----客户域的小组组长，负责模块设计以及安排组员研发。</p>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <div class="list-group">
                                         <a href="#" class="list-group-item">
-                                            <h4 class="list-group-item-heading">后端架构</h4>
-                                            <p class="list-group-item-text" style="min-height: 120px;font-size: 14px">以微服务架构+Rest Api构建后端服务，充分解耦各个系统，同时实现API的自动化生成 参考微信公众号的实现模式，已客户中心为基础，系统间以公众号的模式治理，实现公司内系统或第三方系统的快速接入</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="list-group">
-                                        <a href="#" class="list-group-item">
-                                            <h4 class="list-group-item-heading">前端架构</h4>
-                                            <p class="list-group-item-text" style="min-height: 120px;font-size: 14px">以React、React Router、Redux、Webpack等新一代前端技术，构建Spa前端系统，同时实现前后端的真正分离，优化了团队的开发效率 App以H5作为主要的功能实现，同时使用类微信的Js Bridge的Api，达到原生与H5的无缝接入</p>
+                                            <h4 class="list-group-item-heading">项目业绩</h4>
+                                            <p class="list-group-item-text" style="min-height: 120px;font-size: 14px">综合查询模块为日后CRM2.0的亮点模块，本人负责完成数据库设计、以及查询框架代码，其中查询条件、查询内容、查询结果展示都可配置，作为独立模块，以应用在多个项目中，实现快速的定制开发。</p>
                                         </a>
                                     </div>
                                 </div>
