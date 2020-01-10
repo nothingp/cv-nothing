@@ -10,7 +10,7 @@ ADD conf/gzip.conf /etc/nginx/conf.d/gzip.conf
 
 RUN mkdir /app
 WORKDIR /app
-ADD dist/ /app
+ADD ./ /app
 
 #ADD docker-entrypoint.sh /usr/local/bin
 
