@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跑马查询分析</title>
+</head>
+<body style="height: 500px;">
+   <div> 
+     连赢
+     <input id="dateInput"/>
+     <label>时间格式必须是06-05-2018，即2018年5月6日，默认当日不需要更改</label>
+   </div>
+   <div id="search">
+     <select id="raceSelect">
+       <option value="1" selected>场次1</option>
+       <option value="2">场次2</option>
+       <option value="3">场次3</option>
+       <option value="4">场次4</option>
+       <option value="5">场次5</option>
+       <option value="6">场次6</option>
+       <option value="7">场次7</option>
+       <option value="8">场次8</option>
+       <option value="9">场次9</option>
+       <option value="10">场次10</option>
+       <option value="11">场次11</option>
+     </select>
+     <input id="numText" placeholder="请输入常数" value="90">
+     <button onclick="search()">查询</button>
+   </div>
+   <div id="content"></div>
+</body>
+<script>
+  document.getElementById('dateInput').value = getNowFormatDate();
+  function getNowFormatDate() {
+    var date = new Date();
+    var seperator1 = "-";
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var strDate = date.getDate();
+    if (month >= 1 && month <= 9) {
+      month = "0" + month;
+    }
+    if (strDate >= 0 && strDate <= 9) {
+      strDate = "0" + strDate;
+    }
+    var currentdate = strDate + seperator1 + month + seperator1 +  year;
+    return currentdate;
+  }
+  function search(){
+    var script = document.createElement("script");
+    var dateValue =  document.getElementById('dateInput').value;
+    script.type = "text/javascript";
+    var raceSelect = document.getElementById('raceSelect').value;
+    var url = 'http://cont.abcd-life.com/qdata?q=1&race_date='+dateValue+'&race_type=3H&rc='+raceSelect+'&m=HK&c=2'
+    script.src = url;
+    document.getElementById('content').innerText = '查询中。。。。。。'
+    document.body.appendChild(script);
+  }
+  function c(data){
+    var numText = document.getElementById('numText').value*1;
+    var dataArr = data.pendingData.split("\n");
+    var newDataArr = [];
+    var key = '';
+    for(var i=0;i<dataArr.length; i++){
+      var itemData = dataArr[i].split('\t');
+      if(dataArr.length<4)
+        continue;
+      //if(dataArr[i].indexOf('\t89')>-1){
+      if(key!=itemData[1]){
+        key = itemData[1];
+        if(itemData[3]>=numText){
+          newDataArr.push(dataArr[i]);
+        }
+      }
+
+      //}
+    }
+    //alert(newDataArr)
+    //alert(data.pendingData.split("\n1").length);
+    if(newDataArr.length==0){
+      document.getElementById('content').innerText = '查询无数据'
+    }else{
+      document.getElementById('content').innerText = newDataArr.join("\n");
+    }
+
+
+
+
+    //$('#content').append(data.pendingData)
+  }
+</script>
+</html>
